@@ -4,7 +4,10 @@
   "description": "柳铁H5实训正式通",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev_mac": "WEBPACK_NEV=dev webpack-dev-server --inline --port 8088",
+		"dev": "set WEBPACK_NEV=dev && webpack-dev-server --inline --port 8088",
+		"dist_mac": "WEBPACK_NEV=online webpack -p",
+		"dist": "set WEBPACK_NEV=online && webpack -p"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,7 @@
     "style-loader": "^1.0.0",
     "url-loader": "^2.1.0",
     "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8"
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.0"
   }
 }
