@@ -1,4 +1,13 @@
 'use strict'
-//var$ =require('jquery');
 require('./index.css');
-$('body').html("我是你爸爸");
+var _mm = require('util/mm.js');
+_mm.request({
+	//url:'./text.do',  //错误接口
+	url:'/product/list.do?keyword=1',
+	success:function(res){
+		console.log("这是从网络接口中获取的数据：",res);
+	},
+	error:function(errMsg){
+		console.log(errMsg);
+	}
+});

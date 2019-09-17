@@ -6,6 +6,7 @@ var path = require('path');
 var ExtractTextplugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
+var str = new Buffer('aHR0cDovL3Rlc3QuaGFwcHltbWFsbC5jb20v', 'base64');
 var getHtmlConfig =function(name){
 
 	return{
@@ -71,7 +72,22 @@ var config = {
 		new ExtractTextplugin('css/[name].css'),
 		new HtmlWebpackPlugin(getHtmlConfig('index')),
 		new HtmlWebpackPlugin(getHtmlConfig('user-login'))
-	]
+	],
+	resolve:{
+		alias:{
+			util: path.resolve(__dirname,'src/util')
+		}
+	},
+	devServer:{
+		port:8088,
+		inline:true,
+		proxy:{
+			"**/*.do":{
+				target:str.toString(),
+				changeOrigin:true
+			}
+		}
+	}
 }
 
 if ('dev' === WEBPACK_ENV) {
