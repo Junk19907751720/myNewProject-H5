@@ -1,7 +1,7 @@
 'use strict'
 require('./index.css');
 var _mm = require('util/mm.js');
-_mm.request({
+/*_mm.request({
 	//url:'./text.do',  //错误接口
 	url:'/product/list.do?keyword=1',
 	success:function(res){
@@ -10,4 +10,10 @@ _mm.request({
 	error:function(errMsg){
 		console.log(errMsg);
 	}
-});
+});*/
+//console.log(_mm.getUrlParam('test'));
+//var html = '<div>{{ date }}<div>';
+//var date = {
+//	date:123
+//}
+//console.log(_mm.renderHtml(html,date));

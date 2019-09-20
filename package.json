@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev_mac": "WEBPACK_NEV=dev webpack-dev-server --inline --port 8088",
-		"dev": "set WEBPACK_NEV=dev && webpack-dev-server --inline --port 8088",
-		"dist_mac": "WEBPACK_NEV=online webpack -p",
-		"dist": "set WEBPACK_NEV=online && webpack -p"
+    "dev": "set WEBPACK_NEV=dev && webpack-dev-server --inline --port 8088",
+    "dist_mac": "WEBPACK_NEV=online webpack -p",
+    "dist": "set WEBPACK_NEV=online && webpack -p"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,9 @@
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",
     "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "hogan.js": "^3.0.2"
   }
 }

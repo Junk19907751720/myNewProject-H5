@@ -75,7 +75,8 @@ var config = {
 	],
 	resolve:{
 		alias:{
-			util: path.resolve(__dirname,'src/util')
+			util: path.resolve(__dirname,'src/util'),
+			node_modules:path.resolve(__dirname,'node_modules')
 		}
 	},
 	devServer:{
