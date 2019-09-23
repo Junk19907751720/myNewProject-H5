@@ -1,19 +1,20 @@
 'use strict'
+
 require('./index.css');
+require('@/common/nav/index.js');
+require('@/common/header/index.js');
+require('@/common/nav-side/index.js');
+require('@/common/nav-simple/index.js');
+
 var _mm = require('util/mm.js');
-/*_mm.request({
-	//url:'./text.do',  //错误接口
-	url:'/product/list.do?keyword=1',
-	success:function(res){
-		console.log("这是从网络接口中获取的数据：",res);
-	},
-	error:function(errMsg){
-		console.log(errMsg);
-	}
-});*/
-//console.log(_mm.getUrlParam('test'));
-//var html = '<div>{{ date }}<div>';
-//var date = {
-//	date:123
-//}
-//console.log(_mm.renderHtml(html,date));
+var navSide = require('@/common/nav-side/index.js');
+
+navSide.init({
+  name: 'user-center'
+});
+navSide.init({
+  name: 'order-list'
+});
+navSide.init({
+  name: 'user-pass-update'
+});
